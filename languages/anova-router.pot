@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Anova Router 1.0.3\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: anova-router\n"
+
+msgid "Primary menu"
+msgstr ""
+
+msgid "Footer menu"
+msgstr ""
+
+msgid "Hide page title"
+msgstr ""
+
+msgid "Skip to content"
+msgstr ""
+
+msgid "Comments are closed."
+msgstr ""
+
+msgid "Page not found"
+msgstr ""
+
+msgid "The link may be broken or the page may have been moved."
+msgstr ""
+
+msgid "Back to homepage"
+msgstr ""
+
+msgid "Search results: %s"
+msgstr ""
+
+msgid "Nothing matched. Try another keyword."
+msgstr ""
+
+msgid "No content yet."
+msgstr ""
+
+msgid "Pages:"
+msgstr ""
+
+msgid "Activate Anova Canvas"
+msgstr ""
+
+msgid "installed, not active"
+msgstr ""
+
+msgid "Install Anova Canvas"
+msgstr ""
+
+msgid "not installed"
+msgstr ""
+
+msgid "Anova Router requires Anova Canvas."
+msgstr ""
+
+msgid "Install and activate the Anova Canvas plugin to use the built-in builder integration and Theme Builder. Anova Canvas is a standalone plugin and also works with other themes; Loteng Kit is not required."
+msgstr ""
+
+msgid "Anova Canvas status: %s."
+msgstr ""
+
+msgid "Dismiss"
+msgstr ""
+
+msgid "Headers & footers from Anova Canvas or Elementor Pro always take priority. The settings below only affect the theme default output."
+msgstr ""
+
+msgid "Page layout"
+msgstr ""
+
+msgid "Sets the width of the whole page (header, content, footer). The \"Blank canvas\" & \"Full width\" page templates always span the full screen."
+msgstr ""
+
+msgid "Full — content spans the screen, no maximum width"
+msgstr ""
+
+msgid "Boxed — the site is wrapped in a fixed-width box"
+msgstr ""
+
+msgid "Custom — set your own maximum width"
+msgstr ""
+
+msgid "Boxed width (px)"
+msgstr ""
+
+msgid "Used with the \"Boxed\" layout. Also used by Anova Canvas when Canvas does not set its own width."
+msgstr ""
+
+msgid "Custom width (px)"
+msgstr ""
+
+msgid "Used with the \"Custom\" layout (480–2400 px)."
+msgstr ""
+
+msgid "Outer background color (boxed)"
+msgstr ""
+
+msgid "Page color outside the box. Leave empty for the default background."
+msgstr ""
+
+msgid "Show the default header when no builder provides one"
+msgstr ""
+
+msgid "Show the default footer when no builder provides one"
+msgstr ""
+
+msgid "Show page & post titles"
+msgstr ""
+
+msgid "Load theme CSS (turn off when the whole design is built in a builder)"
+msgstr ""
+
+msgid "Accent color"
+msgstr ""
+
+msgid "Default footer text"
+msgstr ""
+
+msgid "Leave empty for \"© year site name\". Tokens: {year}, {site}."
+msgstr ""
+
+msgid "Anova Router"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+#. Description of the theme
+msgid "A lightweight theme for Anova Canvas. Anova Canvas is requested as a companion plugin to enable the builder integration and Theme Builder; the Canvas plugin stays standalone and works with any theme. This theme also supports Elementor, Gutenberg and other builders."
+msgstr ""
+
+#. Template Name of the theme
+msgid "Anova Router — Blank canvas"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Anova Router — Full width"
+msgstr ""
+
+#. Author of the theme
+msgid "Loteng Anova Teknologi"
+msgstr ""
+
+#. Theme tag label
+msgid "Custom Menu"
+msgstr ""
+
+#. Theme tag label
+msgid "Threaded Comments"
+msgstr ""
+
+#. Theme tag label
+msgid "Translation Ready"
+msgstr ""
+
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""

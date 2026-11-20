@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Anova Router 1.0.3\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: anova-router\n"
+
+msgid "Primary menu"
+msgstr "Menu utama"
+
+msgid "Footer menu"
+msgstr "Menu footer"
+
+msgid "Hide page title"
+msgstr "Sembunyikan judul halaman"
+
+msgid "Skip to content"
+msgstr "Langsung ke konten"
+
+msgid "Comments are closed."
+msgstr "Komentar ditutup."
+
+msgid "Page not found"
+msgstr "Halaman tidak ditemukan"
+
+msgid "The link may be broken or the page may have been moved."
+msgstr "Tautan mungkin rusak atau halaman sudah dipindahkan."
+
+msgid "Back to homepage"
+msgstr "Kembali ke beranda"
+
+msgid "Search results: %s"
+msgstr "Hasil pencarian: %s"
+
+msgid "Nothing matched. Try another keyword."
+msgstr "Tidak ada yang cocok. Coba kata kunci lain."
+
+msgid "No content yet."
+msgstr "Belum ada konten."
+
+msgid "Pages:"
+msgstr "Halaman:"
+
+msgid "Activate Anova Canvas"
+msgstr "Aktifkan Anova Canvas"
+
+msgid "installed, not active"
+msgstr "terpasang, belum aktif"
+
+msgid "Install Anova Canvas"
+msgstr "Pasang Anova Canvas"
+
+msgid "not installed"
+msgstr "belum terpasang"
+
+msgid "Anova Router requires Anova Canvas."
+msgstr "Anova Router membutuhkan Anova Canvas."
+
+msgid "Install and activate the Anova Canvas plugin to use the built-in builder integration and Theme Builder. Anova Canvas is a standalone plugin and also works with other themes; Loteng Kit is not required."
+msgstr "Pasang dan aktifkan plugin Anova Canvas untuk memakai integrasi builder serta Theme Builder bawaan. Anova Canvas merupakan plugin mandiri dan dapat digunakan dengan tema lain; Loteng Kit tidak diperlukan."
+
+msgid "Anova Canvas status: %s."
+msgstr "Status Anova Canvas: %s."
+
+msgid "Dismiss"
+msgstr "Sembunyikan"
+
+msgid "Headers & footers from Anova Canvas or Elementor Pro always take priority. The settings below only affect the theme default output."
+msgstr "Header & footer dari Anova Canvas atau Elementor Pro selalu didahulukan. Pengaturan di bawah hanya untuk tampilan bawaan tema."
+
+msgid "Page layout"
+msgstr "Tata letak halaman"
+
+msgid "Sets the width of the whole page (header, content, footer). The \"Blank canvas\" & \"Full width\" page templates always span the full screen."
+msgstr "Menentukan lebar seluruh halaman (header, konten, footer). Template halaman \"Kanvas kosong\" & \"Lebar penuh\" tetap selebar layar."
+
+msgid "Full — content spans the screen, no maximum width"
+msgstr "Full — konten selebar layar, tanpa batas lebar"
+
+msgid "Boxed — the site is wrapped in a fixed-width box"
+msgstr "Boxed — situs dibungkus kotak berlebar tetap"
+
+msgid "Custom — set your own maximum width"
+msgstr "Custom — lebar maksimum diatur sendiri"
+
+msgid "Boxed width (px)"
+msgstr "Lebar boxed (px)"
+
+msgid "Used with the \"Boxed\" layout. Also used by Anova Canvas when Canvas does not set its own width."
+msgstr "Dipakai saat tata letak \"Boxed\". Juga dipakai Anova Canvas bila Canvas tidak mengatur lebarnya sendiri."
+
+msgid "Custom width (px)"
+msgstr "Lebar custom (px)"
+
+msgid "Used with the \"Custom\" layout (480–2400 px)."
+msgstr "Dipakai saat tata letak \"Custom\" (480–2400 px)."
+
+msgid "Outer background color (boxed)"
+msgstr "Warna latar luar (boxed)"
+
+msgid "Page color outside the box. Leave empty for the default background."
+msgstr "Warna halaman di luar kotak. Biarkan kosong untuk latar bawaan."
+
+msgid "Show the default header when no builder provides one"
+msgstr "Tampilkan header bawaan bila builder tidak menyediakan header"
+
+msgid "Show the default footer when no builder provides one"
+msgstr "Tampilkan footer bawaan bila builder tidak menyediakan footer"
+
+msgid "Show page & post titles"
+msgstr "Tampilkan judul halaman & artikel"
+
+msgid "Load theme CSS (turn off when the whole design is built in a builder)"
+msgstr "Muat CSS tema (matikan bila semua tampilan dibuat di builder)"
+
+msgid "Accent color"
+msgstr "Warna aksen"
+
+msgid "Default footer text"
+msgstr "Teks footer bawaan"
+
+msgid "Leave empty for \"© year site name\". Tokens: {year}, {site}."
+msgstr "Kosongkan untuk \"© tahun nama situs\". Token: {year}, {site}."
+
+msgid "Anova Router"
+msgstr "Anova Router"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Menu"
+msgstr "Menu"
+
+#. Description of the theme
+msgid "A lightweight theme for Anova Canvas. Anova Canvas is requested as a companion plugin to enable the builder integration and Theme Builder; the Canvas plugin stays standalone and works with any theme. This theme also supports Elementor, Gutenberg and other builders."
+msgstr "Tema ringan untuk Anova Canvas. Anova Canvas diminta sebagai plugin pendamping untuk mengaktifkan integrasi builder dan Theme Builder; plugin Canvas tetap mandiri serta dapat digunakan dengan tema apa pun. Tema ini juga mendukung Elementor, Gutenberg, dan builder lain."
+
+#. Template Name of the theme
+msgid "Anova Router — Blank canvas"
+msgstr "Anova Router — Kanvas kosong"
+
+#. Template Name of the theme
+msgid "Anova Router — Full width"
+msgstr "Anova Router — Lebar penuh"
+
+#. Author of the theme
+msgid "Loteng Anova Teknologi"
+msgstr "Loteng Anova Teknologi"
+
+#. Theme tag label
+msgid "Custom Menu"
+msgstr "Menu Kustom"
+
+#. Theme tag label
+msgid "Threaded Comments"
+msgstr "Komentar Bertingkat"
+
+#. Theme tag label
+msgid "Translation Ready"
+msgstr "Siap Diterjemahkan"
+
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s komentar"
