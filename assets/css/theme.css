@@ -1,0 +1,164 @@
+/* Anova Router â€” gaya dasar minimal. Matikan di Tampilan â†’ Sesuaikan â†’ Anova Router. */
+:root {
+  --ar-container: 1200px;
+  --ar-gutter: 20px;
+  --ar-accent: #3159dd;
+  --ar-text: #1f2937;
+  --ar-heading: #0f172a;
+  --ar-muted: #6b7280;
+  --ar-border: #e5e7eb;
+  --ar-surface: #f8fafc;
+  --ar-bg: #ffffff;
+  --ar-radius: 10px;
+  --ar-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--ar-bg); color: var(--ar-text); font-family: var(--ar-font); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img, video, iframe { max-width: 100%; height: auto; }
+a { color: var(--ar-accent); text-underline-offset: .15em; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, h3, h4, h5, h6 { color: var(--ar-heading); line-height: 1.25; margin: 1.6em 0 .6em; }
+h1 { font-size: clamp(2rem, 1.4rem + 2.2vw, 2.75rem); }
+h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); }
+p, ul, ol, figure, blockquote, pre, table { margin: 0 0 1.2em; }
+blockquote { border-left: 3px solid var(--ar-accent); padding: .2em 0 .2em 1.1em; color: var(--ar-muted); }
+pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; }
+pre { background: var(--ar-surface); border: 1px solid var(--ar-border); border-radius: var(--ar-radius); padding: 1em; overflow: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .6em .75em; border-bottom: 1px solid var(--ar-border); text-align: left; }
+input, textarea, select, button { font: inherit; }
+.ar-entry input[type=text], .ar-entry input[type=email], .ar-entry input[type=url], .ar-entry input[type=search], .ar-entry input[type=password], .ar-entry input[type=tel], .ar-entry input[type=number], .ar-entry textarea, .ar-entry select, .ar-comments input[type=text], .ar-comments input[type=email], .ar-comments input[type=url], .ar-comments input[type=search], .ar-comments input[type=password], .ar-comments input[type=tel], .ar-comments input[type=number], .ar-comments textarea, .ar-comments select, .ar-archive input[type=text], .ar-archive input[type=email], .ar-archive input[type=url], .ar-archive input[type=search], .ar-archive input[type=password], .ar-archive input[type=tel], .ar-archive input[type=number], .ar-archive textarea, .ar-archive select, .ar-404 input[type=text], .ar-404 input[type=email], .ar-404 input[type=url], .ar-404 input[type=search], .ar-404 input[type=password], .ar-404 input[type=tel], .ar-404 input[type=number], .ar-404 textarea, .ar-404 select, .ar-woo input[type=text], .ar-woo input[type=email], .ar-woo input[type=url], .ar-woo input[type=search], .ar-woo input[type=password], .ar-woo input[type=tel], .ar-woo input[type=number], .ar-woo textarea, .ar-woo select, .search-form input[type=text], .search-form input[type=email], .search-form input[type=url], .search-form input[type=search], .search-form input[type=password], .search-form input[type=tel], .search-form input[type=number], .search-form textarea, .search-form select { width: 100%; max-width: 100%; padding: .65em .8em; border: 1px solid var(--ar-border); border-radius: 8px; background: #fff; color: inherit; }
+
+:where(.ar-entry, .ar-comments, .ar-archive, .ar-404, .ar-woo, .search-form) :is(input, textarea, select):focus { outline: 2px solid var(--ar-accent); outline-offset: 1px; }
+.ar-button, .search-form button, .search-form input[type=submit], .ar-comments input[type=submit], .ar-entry__content :where(.wp-block-search__button, .wp-element-button, input[type=submit]) { display: inline-flex; align-items: center; justify-content: center; gap: .4em; padding: .65em 1.2em; border: 0; border-radius: 8px; background: var(--ar-accent); color: #fff; font-weight: 600; text-decoration: none; cursor: pointer; }
+/* Theme buttons only â€” builder buttons keep their own styles. */
+.ar-button:hover, .search-form button:hover, .search-form input[type=submit]:hover, .ar-comments input[type=submit]:hover { filter: brightness(.94); color: #fff; }
+
+.screen-reader-text { border: 0; clip: rect(1px,1px,1px,1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
+.skip-link:focus { clip: auto; clip-path: none; height: auto; width: auto; left: 10px; top: 10px; z-index: 100000; padding: 12px 16px; background: #fff; color: var(--ar-heading); border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,.15); }
+
+.ar-container { width: 100%; max-width: calc(var(--ar-container) + var(--ar-gutter) * 2); margin-inline: auto; padding-inline: var(--ar-gutter); }
+.ar-site-main { display: block; min-height: 50vh; }
+.ar-full-width, .ar-canvas { width: 100%; }
+
+/* Tata letak halaman â€” Full / Boxed / Custom (Tampilan â†’ Sesuaikan â†’ Anova Router).
+   Body selalu membawa ar-layout-full | ar-layout-boxed | ar-layout-custom. */
+.ar-shell { width: 100%; margin-inline: auto; background: var(--ar-bg); }
+
+/* Full: kontainer tanpa batas lebar, gutter tetap. */
+.ar-layout-full .ar-container { max-width: none; }
+.ar-layout-full .alignwide { margin-inline: 0; max-width: 100%; }
+
+/* Boxed: seluruh situs dibungkus kotak; latar halaman terlihat di sekelilingnya. */
+.ar-layout-boxed { background-color: var(--ar-page-bg, #eef2f7); }
+.ar-layout-boxed .ar-shell { max-width: calc(var(--ar-container) + var(--ar-gutter) * 2); box-shadow: 0 20px 60px rgba(15, 23, 42, .08); display: flex; flex-direction: column; min-height: 100vh; }
+.ar-layout-boxed .ar-site-main { flex: 1 0 auto; }
+@media (min-width: 1024px) {
+  .ar-layout-boxed .ar-shell { margin-block: 28px; min-height: calc(100vh - 56px); }
+  .admin-bar.ar-layout-boxed .ar-shell { min-height: calc(100vh - 88px); }
+}
+@media (max-width: 1023px) {
+  .ar-layout-boxed .ar-shell { box-shadow: none; }
+}
+
+/* Custom: lebar maksimum dari pengaturan; tanpa kotak & tanpa latar luar. */
+.ar-layout-custom .ar-container { max-width: calc(var(--ar-container) + var(--ar-gutter) * 2); }
+
+/* Pada boxed, blok alignfull mengikuti lebar kotak, tidak melewati bingkai halaman. */
+.ar-layout-boxed .alignfull { margin-inline: 0; width: 100%; max-width: 100%; }
+
+/* Template "Kanvas kosong" & "Lebar penuh" selalu selebar layar: tanpa kotak & tanpa latar luar. */
+.ar-template-canvas.ar-layout-boxed,
+.ar-template-full-width.ar-layout-boxed { background-color: var(--ar-bg); }
+
+/* Header */
+.ar-header { border-bottom: 1px solid var(--ar-border); background: var(--ar-bg); position: relative; z-index: 50; }
+.ar-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+.ar-brand { display: flex; flex-direction: column; min-width: 0; }
+.ar-brand__name { color: var(--ar-heading); font-weight: 800; font-size: 1.25rem; text-decoration: none; letter-spacing: -.01em; }
+.ar-brand__tagline { color: var(--ar-muted); font-size: .8rem; }
+.ar-brand .custom-logo { display: block; max-height: 56px; width: auto; }
+.ar-menu { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.ar-menu a { color: var(--ar-text); text-decoration: none; font-weight: 500; font-size: .95rem; }
+.ar-menu a:hover, .ar-menu .current-menu-item > a { color: var(--ar-accent); }
+.ar-nav .menu-item { position: relative; }
+.ar-nav .sub-menu { list-style: none; margin: 0; padding: 8px; position: absolute; top: 100%; left: -8px; min-width: 210px; background: #fff; border: 1px solid var(--ar-border); border-radius: var(--ar-radius); box-shadow: 0 12px 30px rgba(15,23,42,.1); opacity: 0; visibility: hidden; transform: translateY(6px); transition: .15s; }
+.ar-nav .sub-menu .sub-menu { top: -8px; left: 100%; }
+.ar-nav .sub-menu a { display: block; padding: 7px 10px; border-radius: 6px; }
+.ar-nav .sub-menu a:hover { background: var(--ar-surface); }
+.ar-nav .menu-item:hover > .sub-menu, .ar-nav .menu-item:focus-within > .sub-menu { opacity: 1; visibility: visible; transform: none; }
+.ar-nav-toggle { display: none; align-items: center; justify-content: center; border: 0; border-radius: 8px; cursor: pointer; background: transparent; color: var(--ar-heading); width: 44px; height: 44px; padding: 0; }
+.ar-nav-toggle__bar, .ar-nav-toggle__bar::before, .ar-nav-toggle__bar::after { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; position: relative; transition: .2s; }
+.ar-nav-toggle__bar::before, .ar-nav-toggle__bar::after { content: ""; position: absolute; left: 0; }
+.ar-nav-toggle__bar::before { top: -7px; }
+.ar-nav-toggle__bar::after { top: 7px; }
+.ar-nav-toggle[aria-expanded=true] .ar-nav-toggle__bar { background: transparent; }
+.ar-nav-toggle[aria-expanded=true] .ar-nav-toggle__bar::before { top: 0; transform: rotate(45deg); }
+.ar-nav-toggle[aria-expanded=true] .ar-nav-toggle__bar::after { top: 0; transform: rotate(-45deg); }
+@media (max-width: 900px) {
+  .ar-nav-toggle { display: inline-flex; }
+  .ar-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--ar-bg); border-bottom: 1px solid var(--ar-border); padding: 12px var(--ar-gutter) 20px; }
+  .ar-nav.is-open { display: block; }
+  .ar-nav .ar-menu { flex-direction: column; gap: 0; }
+  .ar-nav .ar-menu a { display: block; padding: 10px 0; border-bottom: 1px solid var(--ar-border); }
+  .ar-nav .sub-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: 0; padding: 0 0 0 16px; min-width: 0; }
+}
+
+/* Footer */
+.ar-footer { border-top: 1px solid var(--ar-border); background: var(--ar-surface); color: var(--ar-muted); font-size: .9rem; margin-top: 64px; }
+.ar-footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 28px; }
+.ar-footer__copy { margin: 0; }
+.ar-menu--footer { gap: 4px 18px; }
+.ar-menu--footer a { color: var(--ar-muted); font-size: .9rem; }
+
+/* Content */
+.ar-entry, .ar-archive, .ar-404 { padding-block: 48px 24px; }
+.ar-entry__header { margin-bottom: 28px; }
+.ar-entry__title { margin: 0 0 .3em; }
+.ar-entry__meta { color: var(--ar-muted); font-size: .9rem; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.ar-entry__meta a { color: inherit; }
+.ar-entry__thumb { margin: 0 0 28px; }
+.ar-entry__thumb img { border-radius: var(--ar-radius); width: 100%; }
+.ar-entry__content > *:first-child { margin-top: 0; }
+.ar-entry__content::after { content: ""; display: table; clear: both; }
+.ar-entry__footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--ar-border); }
+.ar-tags a { display: inline-block; margin: 0 6px 6px 0; padding: 3px 10px; background: var(--ar-surface); border: 1px solid var(--ar-border); border-radius: 999px; font-size: .85rem; text-decoration: none; color: var(--ar-text); }
+.nav-links { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.alignleft { float: left; margin: .3em 1.5em 1em 0; }
+.alignright { float: right; margin: .3em 0 1em 1.5em; }
+.aligncenter { display: block; margin-inline: auto; }
+.alignwide { margin-inline: calc((min(100vw, var(--ar-container) + 240px) - 100%) / -2); max-width: min(100vw, var(--ar-container) + 240px); }
+.alignfull { margin-inline: calc(50% - 50vw); max-width: 100vw; width: 100vw; }
+.wp-caption-text, figcaption { color: var(--ar-muted); font-size: .85rem; text-align: center; margin-top: .5em; }
+
+.ar-archive__header { margin-bottom: 32px; }
+.ar-archive__desc { color: var(--ar-muted); }
+.ar-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.ar-card { border: 1px solid var(--ar-border); border-radius: var(--ar-radius); overflow: hidden; background: var(--ar-bg); display: flex; flex-direction: column; }
+.ar-card__thumb img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.ar-card__body { padding: 18px 20px 20px; }
+.ar-card__title { font-size: 1.2rem; margin: 0 0 .3em; }
+.ar-card__title a { color: var(--ar-heading); text-decoration: none; }
+.ar-card__title a:hover { color: var(--ar-accent); }
+.ar-card__excerpt { color: var(--ar-muted); font-size: .95rem; margin-top: .6em; }
+.ar-card__excerpt p { margin: 0; }
+.pagination { margin-top: 40px; }
+.pagination .nav-links { justify-content: center; gap: 6px; }
+.page-numbers { display: inline-flex; min-width: 40px; height: 40px; align-items: center; justify-content: center; border: 1px solid var(--ar-border); border-radius: 8px; text-decoration: none; color: var(--ar-text); padding: 0 10px; }
+.page-numbers.current { background: var(--ar-accent); border-color: var(--ar-accent); color: #fff; }
+.ar-empty, .ar-404 { text-align: center; max-width: 560px; }
+.ar-404__code { font-size: clamp(4rem, 3rem + 6vw, 7rem); font-weight: 800; line-height: 1; margin: 0 0 .1em; color: var(--ar-accent); letter-spacing: -.04em; }
+.search-form { display: flex; gap: 8px; margin: 20px 0; }
+.search-form label { flex: 1; }
+
+/* Comments */
+.ar-comments { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--ar-border); }
+.ar-comment-list { list-style: none; padding: 0; }
+.ar-comment-list .children { list-style: none; padding-left: 24px; }
+.ar-comment-list .comment-body { padding: 16px 0; border-bottom: 1px solid var(--ar-border); }
+.ar-comment-list .avatar { border-radius: 50%; vertical-align: middle; margin-right: 8px; }
+.ar-muted { color: var(--ar-muted); }
+
+/* WooCommerce wrapper */
+.ar-woo { padding-block: 40px; }
