@@ -1,0 +1,19 @@
+/*
+Theme Name:        Anova Router
+Theme URI:         https://loteng.net/anova-router
+Author:            Loteng Anova Teknologi
+Author URI:        https://loteng.net
+Description:       A lightweight theme for Anova Canvas. Anova Canvas is requested as a companion plugin to enable the builder integration and Theme Builder; the Canvas plugin stays standalone and works with any theme. This theme also supports Elementor, Gutenberg and other builders.
+Version:           1.0.3
+Requires at least: 6.2
+Tested up to:      6.9
+Requires PHP:      7.4
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       anova-router
+Domain Path:       /languages
+Tags:              one-column, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, accessibility-ready, full-width-template, blog, e-commerce, portfolio
+
+Anova Router sengaja hampir kosong: semua gaya ada di assets/css/theme.css (±5 KB)
+dan dapat dimatikan dari Tampilan → Sesuaikan → Anova Router.
+*/
